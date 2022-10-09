@@ -2,6 +2,10 @@
 
 :root {
     --snow-color: #FCF6F5FF;
+    --input-border-color: #E5E7EB;
+    --invalid-border-color: #ff3333;
+    --valid-color: #9CDFBE;
+    --focus-border-color: #79C0D7;
 }
 
 body, html {
@@ -33,6 +37,7 @@ body {
 
 .main-container {
     margin-left: 30vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -45,13 +50,76 @@ div.description {
     background-color: var(--snow-color);
     opacity: 0.7;
     padding: 0 1rem;
+    flex: 0 0 auto;
 }
 
 p.description {
     bottom: 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 p.description > span {
     font-style: italic;
+}
+
+form {
+    background-color: var(--snow-color);
+    padding: 0 1rem;
+    box-shadow: 0 0.25rem 0.25rem grey;
+}
+
+form h2 {
+    margin-bottom: 0;
+}
+
+form ul {
+    padding-left: 0;
+    margin-top: 0;
+} 
+
+form li {
+    list-style-type: none;
+    display: flex;
+    gap: 4rem;
+    padding-top: 1rem;
+}
+
+input {
+    padding: 4px;
+    width: calc((70vw - 8rem) / 2);
+    border-radius: 4px;
+    font-size: 1rem;
+    border-style: solid;
+    outline: none;
+    border-color: var(--input-border-color);
+}
+
+input[type="password"]:invalid {
+    border-color: var(--invalid-border-color);
+}
+
+input:valid {
+    border-color: var(--valid-color);
+}
+
+input[type]:focus {
+    border-color: var(--focus-border-color);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+form button[type="submit"] {
+    padding: 1rem;
+    background-color: var(--valid-color);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem; 
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 1px 1px 22px 1px var(--valid-color);
 }
