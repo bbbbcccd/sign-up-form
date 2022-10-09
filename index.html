@@ -20,8 +20,54 @@
             </p>    
             <p class="description">You <span>know</span> you want to.</p>
         </div>
-        <form></form>
-        <div class="footer"></div>
+
+        <form action="#" method="post">
+            <h2>Let's do this!</h2>
+
+            <ul>
+                <li>
+                    <div>
+                        <p><label for="first-name">FIRST NAME *</label></p>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    
+                    <div>
+                        <p><label for="last-name">LAST NAME</label></p>
+                        <input type="text" id="last-name" name="last-name">
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <p><label for="email">EMAIL *</label></p>
+                        <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                    </div>
+        
+                    <div>
+                        <p><label for="phone-number">PHONE NUMBER *</label></p>
+                        <input type="tel" id="phone-number" name="phone-number" pattern="^[0-9]{8}$" placeholder="91234567" required>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <p><label for="password">PASSWORD *</label></p>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <div>
+                        <p><label for="cfm-password">CONFIRM PASSWORD *</label></p>
+                        <input type="password" id="cfm-password" name="cfm-password" required>
+                    </div>
+                </li>
+
+                <li>
+                    <button type="submit">Create account</button>
+                </li>
+            </ul>
+        </form>
+
+        <p class="footer"></p>
     </div>
 </body>
 </html>
