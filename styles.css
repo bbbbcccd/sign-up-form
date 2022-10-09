@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Tangerine:bold');
 
+:root {
+    --snow-color: #FCF6F5FF;
+}
+
 body, html {
     height: 100%;
     background-image: url("./images/background-image.jpg");
@@ -15,13 +19,39 @@ body {
 
 .icon-container {
     position: absolute;
-    top: 20vh;
-    background-color: #FCF6F5FF;
+    top: 10vh;
+    height: 20vh;
+    width: 30vw;
+    background-color: var(--snow-color);
     opacity: 0.5; 
     display: flex;
     align-items: center;
     gap: 8px;
     font-size: 3rem;
     font-family: "Tangerine", "Roboto", sans-serif;
-    padding: 8px;
+}
+
+.main-container {
+    margin-left: 30vw;
+    display: flex;
+    flex-direction: column;
+}
+
+div.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 30vh;
+    background-color: var(--snow-color);
+    opacity: 0.7;
+    padding: 0 1rem;
+}
+
+p.description {
+    bottom: 0;
+    font-size: 1.5rem;
+}
+
+p.description > span {
+    font-style: italic;
 }
