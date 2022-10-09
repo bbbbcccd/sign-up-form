@@ -31,7 +31,7 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 3rem;
+    font-size: calc(3vw);
     font-family: "Tangerine", "Roboto", sans-serif;
 }
 
